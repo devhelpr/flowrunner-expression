@@ -1,7 +1,7 @@
 {
-  "name": "@devhelpr/flowrunner-fetch",
-  "version": "0.0.2",
-  "description": "Plugins and helpers to extend flowrunner with fetch",
+  "name": "@devhelpr/flowrunner-expression",
+  "version": "0.0.1",
+  "description": "Flowrunner task to run expressions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "repository": "https://www.github.com/devhelpr/flowrunner-fetch",
+  "repository": "https://www.github.com/devhelpr/flowrunner-expression",
   "author": "Maikel van de Lisdonk",
   "license": "MIT",
   "dependencies": {
