@@ -5,26 +5,27 @@ import * as Promise from 'promise';
 export class ExpressionTask extends FlowTask {
   public execute(node: any, services: any) {
     return new Promise((resolve, reject) => {
-      if (node.expression !== "undefined" && node.expression !== "") {
-
-        jexl.eval(node.expression, node.payload).then((result : any) => {
-          if (result === "undefined") {
-            reject();
-          } else {
-            if (node.assignAsPropertyFromObject !== undefined && node.assignAsPropertyFromObject !== "") {
-              node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = result;
+      if (node.expression !== 'undefined' && node.expression !== '') {
+        jexl
+          .eval(node.expression, node.payload)
+          .then((result: any) => {
+            if (result === 'undefined') {
+              reject();
             } else {
-              node.payload[node.assignToProperty] = result;
-            }
+              if (node.assignAsPropertyFromObject !== undefined && node.assignAsPropertyFromObject !== '') {
+                node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = result;
+              } else {
+                node.payload[node.assignToProperty] = result;
+              }
 
-            resolve(node.payload);
-          }
-        })
-        .catch((err : any) => {
-          console.log("ExpressionTask - error", err)
-  
-          reject();
-        });  
+              resolve(node.payload);
+            }
+          })
+          .catch((err: any) => {
+            console.log('ExpressionTask - error', err);
+
+            reject();
+          });
       } else {
         reject();
       }
@@ -73,9 +74,9 @@ export class ExpressionTask extends FlowTask {
 
   public getConfigMetaData() {
     return [
-      {name:"assignToProperty", defaultValue:"", valueType:"string", required: true},
-			{name:"assignAsPropertyFromObject", defaultValue:"", valueType:"string", required: false},
-			{name:"expression", defaultValue:"", valueType:"string", required: false}      
+      { name: 'assignToProperty', defaultValue: '', valueType: 'string', required: true },
+      { name: 'assignAsPropertyFromObject', defaultValue: '', valueType: 'string', required: false },
+      { name: 'expression', defaultValue: '', valueType: 'string', required: false },
     ];
   }
 }
