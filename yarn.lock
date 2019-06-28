@@ -139,10 +139,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@devhelpr/flowrunner@0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.1.8.tgz#82abecb9e936721cbc36c2c37535fd31fdd7ebbb"
-  integrity sha512-WkvWeHa1q6lrcL4tUhEGZ3mMY5vXfeX9kcIdE79tfYERJD3Ol8u/b94AQYjV1nl3vTZ5Nd3qtYL2r9tnCmtK5w==
+"@devhelpr/flowrunner@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.3.2.tgz#3b3d333d6e294ed9b5d8370e4c06c50021b24b1b"
+  integrity sha512-zg3mjbzZ680t/gvmAkinvsGbDtN+vNx5u7sj3IVRBuMHb0HZyU+Ah4luURTK4BJ2UwG+FDi+hE9niYx3GVl5Sg==
   dependencies:
     "@reactivex/rxjs" "^6.4.0"
     "@types/uuid" "^3.4.4"
