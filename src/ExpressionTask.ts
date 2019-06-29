@@ -6,9 +6,8 @@ export class ExpressionTask extends FlowTask {
   public execute(node: any, services: any) {
     return new Promise((resolve, reject) => {
       if (node.expression !== 'undefined' && node.expression !== '') {
-        
         // force properties to number
-        let payload : any = {};
+        let payload: any = {};
         if (node.forceNumeric === true) {
           for (var property in node.payload) {
             if (node.payload.hasOwnProperty(property)) {
@@ -90,7 +89,7 @@ export class ExpressionTask extends FlowTask {
       { name: 'assignToProperty', defaultValue: '', valueType: 'string', required: true },
       { name: 'assignAsPropertyFromObject', defaultValue: '', valueType: 'string', required: false },
       { name: 'expression', defaultValue: '', valueType: 'string', required: false },
-      { name: 'forceNumeric', defaultValue: false, valueType: 'boolean' , required: false}
+      { name: 'forceNumeric', defaultValue: false, valueType: 'boolean', required: false },
     ];
   }
 }
