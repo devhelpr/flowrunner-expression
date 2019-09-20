@@ -1,5 +1,5 @@
 import { FlowTask, FlowTaskPackageType } from '@devhelpr/flowrunner';
-import * as jexl from 'Jexl';
+import * as jexl from 'jexl';
 import * as Promise from 'promise';
 
 export class ExpressionTask extends FlowTask {
