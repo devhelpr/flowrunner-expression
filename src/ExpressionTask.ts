@@ -11,7 +11,7 @@ export class ExpressionTask extends FlowTask {
         if (node.forceNumeric === true) {
           for (var property in node.payload) {
             if (node.payload.hasOwnProperty(property)) {
-              payload[property] = parseFloat(node.payload[property]);
+              payload[property] = parseFloat(node.payload[property]) || 0;
             }
           }
         } else {
