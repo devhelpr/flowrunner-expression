@@ -25,7 +25,7 @@ export class ExpressionTask extends FlowTask {
               reject();
             } else {
               let resultToPayload = result;
-              if (node.rounding && node.rounding == "floor") {
+              if (node.rounding && node.rounding == 'floor') {
                 resultToPayload = Math.floor(resultToPayload);
               }
 
