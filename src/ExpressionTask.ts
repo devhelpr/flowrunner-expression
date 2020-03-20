@@ -24,10 +24,15 @@ export class ExpressionTask extends FlowTask {
             if (result === 'undefined') {
               reject();
             } else {
+              let resultToPayload = result;
+              if (node.rounding && node.rounding == "floor") {
+                resultToPayload = Math.floor(resultToPayload);
+              }
+
               if (node.assignAsPropertyFromObject !== undefined && node.assignAsPropertyFromObject !== '') {
-                node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = result;
+                node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = resultToPayload;
               } else {
-                node.payload[node.assignToProperty] = result;
+                node.payload[node.assignToProperty] = resultToPayload;
               }
 
               resolve(node.payload);
