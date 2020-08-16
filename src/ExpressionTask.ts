@@ -3,9 +3,8 @@ import * as jexl from 'jexl';
 import * as Promise from 'promise';
 
 export class ExpressionTask extends FlowTask {
-  
-  private compiledExpression : any = undefined;
-  private expression : string = "";
+  private compiledExpression: any = undefined;
+  private expression: string = '';
 
   public execute(node: any, services: any) {
     return new Promise((resolve, reject) => {
