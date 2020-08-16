@@ -26,7 +26,7 @@ export class ExpressionTask extends FlowTask {
         }
 
         this.compiledExpression
-          .eval(node.expression, payload)
+          .eval(payload)
           .then((result: any) => {
             if (result === 'undefined') {
               reject();
