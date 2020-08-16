@@ -3,13 +3,21 @@ import * as jexl from 'jexl';
 import * as Promise from 'promise';
 
 export class ExpressionTask extends FlowTask {
+  
+  private compiledExpression : any = undefined;
+  private expression : string = "";
+
   public execute(node: any, services: any) {
     return new Promise((resolve, reject) => {
       if (node.expression !== 'undefined' && node.expression !== '') {
+        if (!this.compiledExpression || this.expression !== node.expression) {
+          this.compiledExpression = jexl.compile(node.expression);
+          this.expression = node.expression;
+        }
         // force properties to number
         let payload: any = {};
         if (node.forceNumeric === true) {
-          for (var property in node.payload) {
+          for (const property in node.payload) {
             if (node.payload.hasOwnProperty(property)) {
               payload[property] = parseFloat(node.payload[property]) || 0;
             }
@@ -18,14 +26,14 @@ export class ExpressionTask extends FlowTask {
           payload = node.payload;
         }
 
-        jexl
+        this.compiledExpression
           .eval(node.expression, payload)
           .then((result: any) => {
             if (result === 'undefined') {
               reject();
             } else {
               let resultToPayload = result;
-              if (node.rounding && node.rounding == 'floor') {
+              if (node.rounding && node.rounding === 'floor') {
                 resultToPayload = Math.floor(resultToPayload);
               }
 

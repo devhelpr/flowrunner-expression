@@ -17,9 +17,9 @@
   "author": "Maikel van de Lisdonk",
   "license": "MIT",
   "dependencies": {
-    "@devhelpr/flowrunner": "0.3.5",
-    "@types/jexl": "^2.1.0",
-    "jexl": "^1.1.4",
+    "@devhelpr/flowrunner": "0.9.4",
+    "@types/jexl": "^2.2.0",
+    "jexl": "2.2.2",
     "promise": "^8.0.3"
   },
   "devDependencies": {

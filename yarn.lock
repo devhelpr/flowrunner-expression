@@ -139,10 +139,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@devhelpr/flowrunner@0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.3.5.tgz#2e4be5f1bb51a46f7eea8542201dcad60d6d1f97"
-  integrity sha512-UuyU/WI/VErbIsZyzHIIHfuytOYHdH5o+w5l2inoJZh4+YzKanvCqR4E92NqdfYQRWOtbNPycvXImi1bh3u3+w==
+"@devhelpr/flowrunner@0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.9.4.tgz#88c32a51969bf409c115619f75be239f312a1bfc"
+  integrity sha512-iAp1xgDj3FNRcy0dh8CNwofr3NqbESOWNIUQisoE8PZhSAQ7jeL+XQ8RO9ugnJlp2bQ/Ato1lsTXhR0CQvaGAQ==
   dependencies:
     "@reactivex/rxjs" "^6.4.0"
     "@types/uuid" "^3.4.4"
@@ -353,10 +353,10 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/jexl@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/jexl/-/jexl-2.1.0.tgz#5c08251c9890935b83527b3514e574145ef85b26"
-  integrity sha512-bMYxYd+KjQPh517n/Gigsvow1k2hPX3fXBmDxhcRP2Tugkva250y/kETXakkAvuteGAeCQ/xFgRmpSv+OF91dA==
+"@types/jexl@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/jexl/-/jexl-2.2.0.tgz#f7d9c631e78a6d4bad716c79360a6acb1f4e24dd"
+  integrity sha512-btcq6HoxgBeKEAWAgee45C9eO4F7ayWHi3pQK6NpEPYtfo8b4J13QkxcfWN4ck8QDTlnDRQJxMP4Ceb/4ncO7Q==
 
 "@types/node@*":
   version "11.13.6"
@@ -2086,10 +2086,10 @@ jest@^24.5.0:
     import-local "^2.0.0"
     jest-cli "^24.7.1"
 
-jexl@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/jexl/-/jexl-1.1.4.tgz#35cf86f881ea219d1e215c7a41e2e747ce6ee8a6"
-  integrity sha1-Nc+G+IHqIZ0eIVx6QeLnR85u6KY=
+jexl@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/jexl/-/jexl-2.2.2.tgz#eb06cd84684a52b6408be94604c5529f416ccd2f"
+  integrity sha512-HYDGbiZtGLbaxp1b0S7Nqbtegu5zhxaUBzsrMIpoEJDNr1M8lSuowpO7ziXldc/+wGGvwkZYQSS8mW2cPpiGgA==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
