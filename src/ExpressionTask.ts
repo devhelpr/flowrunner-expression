@@ -1,16 +1,18 @@
+
+import { createExpressionTree, executeExpressionTree } from '@devhelpr/expressionrunner';
 import { FlowTask, FlowTaskPackageType } from '@devhelpr/flowrunner';
-import * as jexl from 'jexl';
+
 import * as Promise from 'promise';
 
 export class ExpressionTask extends FlowTask {
-  private compiledExpression: any = undefined;
+  private compiledExpressionTree: any = undefined;
   private expression: string = '';
 
   public execute(node: any, services: any) {
     return new Promise((resolve, reject) => {
       if (node.expression !== 'undefined' && node.expression !== '') {
-        if (!this.compiledExpression || this.expression !== node.expression) {
-          this.compiledExpression = jexl.compile(node.expression);
+        if (!this.compiledExpressionTree || this.expression !== node.expression) {
+          this.compiledExpressionTree = createExpressionTree(node.expression);
           this.expression = node.expression;
         }
         // force properties to number
@@ -25,8 +27,7 @@ export class ExpressionTask extends FlowTask {
           payload = node.payload;
         }
 
-        this.compiledExpression
-          .eval(payload)
+       executeExpressionTree(this.compiledExpressionTree, payload || {})
           .then((result: any) => {
             if (result === 'undefined') {
               reject();

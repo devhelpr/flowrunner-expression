@@ -139,6 +139,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@devhelpr/expressionrunner@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@devhelpr/expressionrunner/-/expressionrunner-0.1.2.tgz#8ab8d81bbf451841d0f2b4ccd4ac87296ee3c247"
+  integrity sha512-skBJYGfUQl0pneUzTpdiRMuvv1aU7fsaNvG1GWUz39R+PbvJ379uEETLbymtc4R4YRHtIIcOJzZKKGF7KOJ+cg==
+
 "@devhelpr/flowrunner@0.9.4":
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.9.4.tgz#88c32a51969bf409c115619f75be239f312a1bfc"
@@ -2085,11 +2090,6 @@ jest@^24.5.0:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.7.1"
-
-jexl@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/jexl/-/jexl-2.2.2.tgz#eb06cd84684a52b6408be94604c5529f416ccd2f"
-  integrity sha512-HYDGbiZtGLbaxp1b0S7Nqbtegu5zhxaUBzsrMIpoEJDNr1M8lSuowpO7ziXldc/+wGGvwkZYQSS8mW2cPpiGgA==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
