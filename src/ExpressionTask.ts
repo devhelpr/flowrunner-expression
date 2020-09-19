@@ -25,31 +25,29 @@ export class ExpressionTask extends FlowTask {
         } else {
           payload = node.payload;
         }
-
-        executeExpressionTree(this.compiledExpressionTree, payload || {})
-          .then((result: any) => {
-            if (result === 'undefined') {
-              reject();
-            } else {
-              let resultToPayload = result;
-              if (node.rounding && node.rounding === 'floor') {
-                resultToPayload = Math.floor(resultToPayload);
-              }
-
-              if (node.assignAsPropertyFromObject !== undefined && node.assignAsPropertyFromObject !== '') {
-                node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = resultToPayload;
-              } else {
-                node.payload[node.assignToProperty] = resultToPayload;
-              }
-
-              resolve(node.payload);
-            }
-          })
-          .catch((err: any) => {
-            console.log('ExpressionTask - error', err);
-
+        try {
+          const result = executeExpressionTree(this.compiledExpressionTree, payload || {});
+          if (isNaN(result) || result === 'undefined') {
+            console.log('ExpressionTask - result is NaN/undefined', result);
             reject();
-          });
+          } else {
+            let resultToPayload = result;
+            if (node.rounding && node.rounding === 'floor') {
+              resultToPayload = Math.floor(resultToPayload);
+            }
+
+            if (node.assignAsPropertyFromObject !== undefined && node.assignAsPropertyFromObject !== '') {
+              node.payload[node.assignAsPropertyFromObject][node.assignToProperty] = resultToPayload;
+            } else {
+              node.payload[node.assignToProperty] = resultToPayload;
+            }
+
+            resolve(node.payload);
+          }
+        } catch (err) {
+          console.log('ExpressionTask - error', err);
+          reject();
+        };
       } else {
         reject();
       }
