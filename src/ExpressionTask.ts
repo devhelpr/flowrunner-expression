@@ -1,4 +1,3 @@
-
 import { createExpressionTree, executeExpressionTree } from '@devhelpr/expressionrunner';
 import { FlowTask, FlowTaskPackageType } from '@devhelpr/flowrunner';
 
@@ -27,7 +26,7 @@ export class ExpressionTask extends FlowTask {
           payload = node.payload;
         }
 
-       executeExpressionTree(this.compiledExpressionTree, payload || {})
+        executeExpressionTree(this.compiledExpressionTree, payload || {})
           .then((result: any) => {
             if (result === 'undefined') {
               reject();
