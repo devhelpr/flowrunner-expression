@@ -47,7 +47,7 @@ export class ExpressionTask extends FlowTask {
         } catch (err) {
           console.log('ExpressionTask - error', err);
           reject();
-        };
+        }
       } else {
         reject();
       }
