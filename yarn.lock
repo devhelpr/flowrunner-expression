@@ -139,15 +139,15 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@devhelpr/expressionrunner@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@devhelpr/expressionrunner/-/expressionrunner-0.1.4.tgz#3975a41fa1ed2f733bb253c365f9fe25f22dee81"
-  integrity sha512-2Aeh7yor4gvReWHz4L5U2Lm9baVYa4m3Cu4DY08MfI/AzH49Hk3BJ+lbdhSkBFbdsDQ2pFsJTSvWWH7RAzjdEg==
+"@devhelpr/expressionrunner@0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@devhelpr/expressionrunner/-/expressionrunner-0.1.6.tgz#54756cde2c8af62d8aaf9584609873d6d9af3f9f"
+  integrity sha512-SRRpZCmkCcF4Wn88VVbE9VwNQ+hm8jCtezwR1anMqdLrEWYzVRnelaGLnT2ujYn1F5+BxFEHkSj4CeLTrUFujw==
 
-"@devhelpr/flowrunner@0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.9.4.tgz#88c32a51969bf409c115619f75be239f312a1bfc"
-  integrity sha512-iAp1xgDj3FNRcy0dh8CNwofr3NqbESOWNIUQisoE8PZhSAQ7jeL+XQ8RO9ugnJlp2bQ/Ato1lsTXhR0CQvaGAQ==
+"@devhelpr/flowrunner@^0.10.9":
+  version "0.10.9"
+  resolved "https://registry.yarnpkg.com/@devhelpr/flowrunner/-/flowrunner-0.10.9.tgz#6069196d2000f420980ab0879c5adf28a462a16f"
+  integrity sha512-24DgLqp0nux3xknP5dkyReTAx+1urvPE6GCDAfOI9OkbhK/uvfv+i6Aq3Q7nUzBEOw4uX10eryFNUdhyS4ocfA==
   dependencies:
     "@reactivex/rxjs" "^6.4.0"
     "@types/uuid" "^3.4.4"
