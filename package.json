@@ -1,6 +1,6 @@
 {
   "name": "@devhelpr/flowrunner-expression",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Flowrunner task to run expressions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
