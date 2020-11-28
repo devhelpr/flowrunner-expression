@@ -27,7 +27,7 @@ export class ExpressionTask extends FlowTask {
         }
         try {
           const result = executeExpressionTree(this.compiledExpressionTree, payload || {});
-          if (node.mode && node.mode === "numeric" && (isNaN(result) || result === 'undefined')) {
+          if (node.mode && node.mode === 'numeric' && (isNaN(result) || result === 'undefined')) {
             console.log('ExpressionTask - result is NaN/undefined', result);
             reject();
           } else {
