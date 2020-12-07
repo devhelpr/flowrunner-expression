@@ -139,10 +139,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@devhelpr/expressionrunner@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@devhelpr/expressionrunner/-/expressionrunner-0.2.3.tgz#5d898f7d4eca03728e81983f29309d098ff14c87"
-  integrity sha512-AGU1HH9LgaOcuAOLwuLUn8HnyoUYPCFa+YFWVP2u3YdqQqJ6kEYlY5qgPvooeA/zQJPTrPYz+G0yD96aNlm5jg==
+"@devhelpr/expressionrunner@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@devhelpr/expressionrunner/-/expressionrunner-0.2.4.tgz#79de28a26c035bf199bc2058d44a1ce17d5d1567"
+  integrity sha512-vOJ5vumYTmAGl1lIQhV8871XI4ad4LEALgl4mhJU6AiCl5nBKVjCngpdG7LSrMTjE+s1i+BGQS+zkTFn+Ypdfw==
 
 "@devhelpr/flowrunner@^0.10.9":
   version "0.10.9"
