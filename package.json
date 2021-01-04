@@ -17,7 +17,7 @@
   "author": "Maikel van de Lisdonk",
   "license": "MIT",
   "dependencies": {
-    "@devhelpr/expressionrunner": "^0.2.5",
+    "@devhelpr/expressionrunner": "^0.2.7",
     "@devhelpr/flowrunner": "^0.10.9",
     "@types/jexl": "^2.2.0",
     "promise": "^8.0.3"
